@@ -6,5 +6,4 @@ const charactersRoute = require('./characters');
 
 router.use('/character', charactersRoute);
 
-
 module.exports = router;

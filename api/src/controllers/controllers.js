@@ -5,14 +5,14 @@ const getAllCharacters = async () => {
     return allCharacters.data.results
 }
 
-const getOneCharacter = async (id) => {
-    const allCharacters = await axios.get(`https://rickandmortyapi.com/api/character/${id}`)
-    return allCharacters.data
-}
-
 const getByName = async (name) => {
     const byName = await axios.get(`https://rickandmortyapi.com/api/character/?name=${name}`)
     return byName.data.results
+}
+
+const getOneCharacter = async (id) => {
+    const allCharacters = await axios.get(`https://rickandmortyapi.com/api/character/${id}`)
+    return allCharacters.data
 }
 
 module.exports = {
