@@ -13,7 +13,8 @@ La prueba deberá ser presentada en un repos público, cada punto separado en un
 Debemos desarrollar lo siguiente.
 
 -Un endpoint que consuma cualquier api público y retorne una lista de datos.
-El endpoint debe de tener filtros del api que se está consumiendo, no más de 3 filtros. 
+
+-El endpoint debe de tener filtros del api que se está consumiendo, no más de 3 filtros. 
 
 -Se debe de agregar una opción para descargar la información en un zip que contenga el json.
 
