@@ -1,16 +1,11 @@
 const router = require('express').Router();
-const { getAllCharacters, getByName } = require('../controllers/controllers');
+const { getAllCharacters, getOneCharacter, getByName } = require('../controllers/controllers');
 
-router.get("/", async (req, res, next) => {
-    const name = req.query.name;
+router.get("/:id", async (req, res, next) => {
+    const { id } = req.params;
     try {
-        if (!name) {
-            const allData = await getAllCharacters();
-            res.json(allData);
-        } else {
-            const filterByName = await getByName(name);
-            res.json(filterByName)
-        }
+        const oneData = await getOneCharacter(id);
+        res.json(oneData)
     }
     catch (error) {
         next(error);
